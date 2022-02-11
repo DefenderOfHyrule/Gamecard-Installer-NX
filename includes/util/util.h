@@ -1,5 +1,4 @@
-#ifndef _UTIL_H_
-#define _UTIL_H_
+#pragma once
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -44,5 +43,3 @@ bool safe_memcpy(void *dst, const void *src, size_t size);
 
 //
 void str2hex(uint8_t *out, const char *str);
-
-#endif

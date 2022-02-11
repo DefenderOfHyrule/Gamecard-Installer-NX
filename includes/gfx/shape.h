@@ -1,5 +1,4 @@
-#ifndef _SHAPE_H_
-#define _SHAPE_H_
+#pragma once
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -41,5 +40,3 @@ void draw_shape_scale(shape_t *shape, int w, int h);
 
 //
 void set_shape(shape_t *shape, uint8_t colour, int x, int y, int w, int h, bool filled);
-
-#endif

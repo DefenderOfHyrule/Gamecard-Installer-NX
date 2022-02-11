@@ -1,6 +1,4 @@
-#ifndef _SET_H_
-#define _SET_H_
-
+#pragma once
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -14,5 +12,3 @@ void exit_set(void);
 
 //
 uint16_t get_sys_fw_version(void);
-
-#endif

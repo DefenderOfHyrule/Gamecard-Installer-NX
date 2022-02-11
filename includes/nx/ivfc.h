@@ -1,12 +1,11 @@
-#ifndef _IVFC_H_
-#define _IVFC_H_
+#pragma once
 
 #include <stdint.h>
 #include <stdbool.h>
 
+
 #define IVFC_MAGIC      0x43465649
 #define IVFC_LEVEL_MAX  0x6
-
 
 typedef struct
 {
@@ -30,6 +29,3 @@ typedef struct
 
 //
 bool ivfc_check_if_magic_valid(uint32_t magic);
-
-
-#endif

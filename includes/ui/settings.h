@@ -1,6 +1,4 @@
-#ifndef _SETINGS_H_
-#define _SETTINGS_H_
-
+#pragma once
 
 #include <switch/services/ncm_types.h>
 
@@ -67,5 +65,3 @@ SettingFlag setting_get_music(void);
 
 void setting_set_sound(SettingFlag flag);
 void setting_set_music(SettingFlag flag);
-
-#endif

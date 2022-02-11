@@ -1,5 +1,4 @@
-#ifndef _TEXT_H_
-#define _TEXT_H_
+#pragma once
 
 #include <SDL2/SDL.h>
 
@@ -47,5 +46,3 @@ void update_text(text_t *t, const char *text, ...);
 
 //
 void free_text(text_t *t);
-
-#endif

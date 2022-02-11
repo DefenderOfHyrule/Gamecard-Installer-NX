@@ -1,6 +1,4 @@
-#ifndef _ERROR_H_
-#define _ERROR_H_
-
+#pragma once
 
 typedef enum
 {
@@ -56,5 +54,3 @@ typedef enum
 //
 const char *get_error_type(ErrorCodes error);
 const char *error_get_description(ErrorCodes error);
-
-#endif

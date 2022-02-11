@@ -1,6 +1,4 @@
-#ifndef _FONT_H_
-#define _FONT_H_
-
+#pragma once
 
 #include <stdbool.h>
 #include <SDL2/SDL_ttf.h>
@@ -31,8 +29,8 @@ typedef struct
     TTF_Font *fnt;
 } font_t;
 
-font_t FONT_TEXT[FONT_MAX];
-font_t FONT_BUTTON[FONT_MAX];
+extern font_t FONT_TEXT[FONT_MAX];
+extern font_t FONT_BUTTON[FONT_MAX];
 
 //
 bool init_font();
@@ -48,5 +46,3 @@ void free_font(font_t *font);
 
 //
 void exit_font();
-
-#endif

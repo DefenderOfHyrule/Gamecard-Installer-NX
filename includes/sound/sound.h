@@ -1,5 +1,4 @@
-#ifndef _SOUND_H_
-#define _SOUND_H_
+#pragma once
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -82,5 +81,3 @@ void free_sound_null(sound_t **sound);
 
 //
 void exit_sound(void);
-
-#endif

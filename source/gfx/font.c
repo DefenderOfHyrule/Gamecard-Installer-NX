@@ -4,6 +4,9 @@
 #include "gfx/font.h"
 
 
+font_t FONT_TEXT[FONT_MAX];
+font_t FONT_BUTTON[FONT_MAX];
+
 font_t create_font_file(const char *file, int font_size)
 {
     font_t font;
@@ -25,7 +28,7 @@ void free_font(font_t *font)
 
 bool init_font()
 {
-    if (R_FAILED(plInitialize()))
+    if (R_FAILED(plInitialize(PlServiceType_User)))
     {
         return false;
     }

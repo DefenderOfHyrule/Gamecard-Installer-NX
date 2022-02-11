@@ -1,6 +1,4 @@
-#ifndef _LOG_H_
-#define _LOG_H_
-
+#pragma once
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -23,5 +21,3 @@ void write_log(const char *text, ...);
 
 //
 void exit_log(void);
-
-#endif

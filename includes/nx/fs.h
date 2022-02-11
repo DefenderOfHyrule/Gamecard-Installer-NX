@@ -1,13 +1,12 @@
-#ifndef _FS_H_
-#define _FS_H_
+#pragma once
 
 #include <stdbool.h>
 #include <stdint.h>
 #include <switch.h>
 
+
 #define GAMECARD_MOUNT_SECURE   "@GcApp"
 #define GAMECARD_MOUNT_UPDATE   "@upp"
-
 
 typedef enum
 {
@@ -301,6 +300,3 @@ bool fs_get_game_card_certificate(FsDeviceOperator *d, const FsGameCardHandle *h
 
 //
 bool fs_get_game_card_update_partition_info(FsDeviceOperator *d, const FsGameCardHandle *handle, GameCardUpdatePartitionInfo_t *info);
-
-
-#endif

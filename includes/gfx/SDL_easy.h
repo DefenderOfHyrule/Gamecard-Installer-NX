@@ -7,8 +7,7 @@
 * TotalJustice.
 */
 
-#ifndef _SDL_EASY_H_
-#define _SDL_EASY_H_
+#pragma once
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -153,5 +152,3 @@ void SDL_UpdateRenderer(void);                                                  
 
 void SDL_EasyInit(Window_Flags w_flags, Renderer_Flags r_flags);                        //init all sdl stuff
 void SDL_EasyExit(void);                                                                //clean and exit
-
-#endif

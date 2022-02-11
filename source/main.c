@@ -16,6 +16,7 @@
 #include "nx/crypto.h"
 #include "nx/set.h"
 #include "nx/lbl.h"
+#include "nx/input.h"
 
 #include "ui/menu.h"
 #include "ui/gc.h"
@@ -46,6 +47,7 @@ void app_init()
 	init_sound_default();
 	init_musicnx();
 	init_font();
+	init_input();
 	init_menu();
 	init_gc();
 }

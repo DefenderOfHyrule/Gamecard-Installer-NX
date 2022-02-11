@@ -1,5 +1,4 @@
-#ifndef _CIRCLE_H_
-#define _CIRCLE_H_
+#pragma once
 
 #include <stdint.h>
 
@@ -35,5 +34,3 @@ void draw_circle_set(circle_t *circle, int x, int y, int r, uint8_t colour);
 
 // re set the information of the circle.
 void set_circle(circle_t *circle, int x, int y, int r, uint8_t colour);
-
-#endif

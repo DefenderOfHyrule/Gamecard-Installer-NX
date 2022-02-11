@@ -1,6 +1,4 @@
-#ifndef _DIR_H_
-#define _DIR_H_
-
+#pragma once
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -47,5 +45,3 @@ void copy_dir(const char *src, char *dest);
 
 // move folder and all of its contents.
 void move_dir(const char *src, char *dest);
-
-#endif

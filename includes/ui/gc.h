@@ -1,5 +1,4 @@
-#ifndef _GC_H_
-#define _GC_H_
+#pragma once
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -91,5 +90,3 @@ bool gc_change_game(GameInfo_t *info_out, uint16_t game_pos);
 //
 bool gc_install_ex(uint16_t game_pos, NcmStorageId storage_id);
 bool gc_install(NcmStorageId storage_id);
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef _BOX_H_
-#define _BOX_H_
+#pragma once
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -29,6 +28,3 @@ void draw_box(box_t *box);
 
 //
 void free_box(box_t *box);
-
-
-#endif

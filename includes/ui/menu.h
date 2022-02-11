@@ -1,6 +1,4 @@
-#ifndef _MENU_H_
-#define _MENU_H_
-
+#pragma once
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -146,5 +144,3 @@ void render_menu(void);
 
 // "main" for the menu.
 void start_menu(void);
-
-#endif

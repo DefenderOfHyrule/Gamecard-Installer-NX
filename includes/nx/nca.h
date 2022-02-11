@@ -1,5 +1,4 @@
-#ifndef _NCA_H_
-#define _NCA_H_
+#pragma once
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -266,5 +265,3 @@ bool nca_start_install(const char *name, const NcmContentId *content_id, uint64_
 //
 void nca_print_header(const NcaHeader_t *header);
 void nca_print_key_area(const NcaKeyArea_t *keak);
-
-#endif

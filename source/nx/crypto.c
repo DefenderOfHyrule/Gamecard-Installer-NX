@@ -16,6 +16,11 @@
 #define KEYGEN_LIMIT    0x20
 
 
+uint8_t HEADER_KEK[0x10];
+uint8_t HEADER_KEY[0x20];
+uint8_t HEADER_KEY_0[0x10];
+uint8_t HEADER_KEY_1[0x10];
+
 typedef struct
 {
     uint8_t total;

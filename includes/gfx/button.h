@@ -1,6 +1,4 @@
-#ifndef _BUTTON_H_
-#define _BUTTON_H_
-
+#pragma once
 
 #include <stdint.h>
 #include <SDL2/SDL.h>
@@ -35,5 +33,3 @@ void position_button(button_t *button, int x, int y);
 
 //
 void free_button(button_t *t);
-
-#endif

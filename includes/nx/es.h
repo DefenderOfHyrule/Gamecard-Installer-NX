@@ -1,5 +1,4 @@
-#ifndef _ES_H_
-#define _ES_H_
+#pragma once
 
 #include <stdint.h>
 #include <switch.h>
@@ -33,5 +32,3 @@ bool es_list_personalised_tik(FsRightsId *out, uint32_t count);
 //
 uint32_t es_get_common_tik_size(const FsRightsId *rights_id);
 bool es_get_common_tik_data(void *out, size_t out_size, const FsRightsId *rights_id);
-
-#endif

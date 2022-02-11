@@ -1,6 +1,4 @@
-#ifndef _FILE_H_
-#define _FILE_H_
-
+#pragma once
 
 #include <stdio.h>
 #include <stdint.h>
@@ -54,5 +52,3 @@ size_t get_file_size2(FILE *fp);
 // offset: starting point of the data.
 // f: the file to read the data from.
 size_t read_file(void *out, size_t size, uint64_t offset, FILE *f);
-
-#endif

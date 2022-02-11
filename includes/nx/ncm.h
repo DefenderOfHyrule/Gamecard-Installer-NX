@@ -1,5 +1,4 @@
-#ifndef _NCM_H_
-#define _NCM_H_
+#pragma once
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -160,5 +159,3 @@ void ncm_print_key(const NcmContentMetaKey *key);
 void ncm_print_keys(const NcmContentMetaKey *key, uint16_t count);
 void ncm_print_application_record(const NcmContentStorageRecord *record);
 void ncm_print_application_records(const NcmContentStorageRecord *records, uint32_t count);
-
-#endif

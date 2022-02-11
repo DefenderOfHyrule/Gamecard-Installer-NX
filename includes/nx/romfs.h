@@ -1,5 +1,4 @@
-#ifndef _ROMFS_H_
-#define _ROMFS_H_
+#pragma once
 
 #include <stdint.h>
 
@@ -11,5 +10,3 @@ typedef struct
     ivfc_header_t ivfc_header;
     uint8_t _0xE0[0x58];
 } RomfsSuperblock_t;
-
-#endif

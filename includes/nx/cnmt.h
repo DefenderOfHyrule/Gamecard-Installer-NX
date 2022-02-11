@@ -1,6 +1,4 @@
-#ifndef _CNMT_H_
-#define _CNMT_H_
-
+#pragma once
 
 #include <stdint.h>
 #include <switch/services/ncm.h>
@@ -69,5 +67,3 @@ void cnmt_print_content_info(const NcmContentInfo *info);
 
 //
 void cnmt_print_content_infos(const NcmContentInfo *info, uint16_t total);
-
-#endif

@@ -545,12 +545,12 @@ void ui_display_detailed_gamecard(void)
             play_sound(g_sound_effects.move, -1, 0);
         }
 
-        if (input.down & KEY_B)
+        if (input.down & HidNpadButton_B)
         {
             break;
         }
 
-        if (input.down & KEY_L)
+        if (input.down & HidNpadButton_L)
         {
             // ensure that we have at least one entry (we always should) then check if we have more than one.
             if (g_game_info.total_count && g_game_info.total_count -1)
@@ -563,7 +563,7 @@ void ui_display_detailed_gamecard(void)
                 }
             }
         }
-        if (input.down & KEY_R)
+        if (input.down & HidNpadButton_R)
         {
             // same as above.
             if (g_game_info.total_count && g_game_info.total_count -1)
@@ -726,23 +726,23 @@ void ui_display_options(void)
             play_sound(g_sound_effects.move, -1, 0);
         }
 
-        if (input.down & KEY_B)
+        if (input.down & HidNpadButton_B)
         {
             if (left_column)
                 break;
             left_column = true;
         }
 
-        else if (input.down & KEY_LEFT)
+        else if (input.down & HidNpadButton_AnyLeft)
         {
             left_column = true;
         }
-        else if (input.down & KEY_RIGHT)
+        else if (input.down & HidNpadButton_AnyRight)
         {
             left_column = false;
         }
 
-        else if (input.down & KEY_DOWN)
+        else if (input.down & HidNpadButton_AnyDown)
         {
             if (left_column)
             {
@@ -754,7 +754,7 @@ void ui_display_options(void)
                 r_cursor = move_cursor_down(r_cursor, cursor_max[cursor]);
             }
         }
-        else if (input.down & KEY_UP)
+        else if (input.down & HidNpadButton_AnyUp)
         {
             if (left_column)
             {
@@ -767,7 +767,7 @@ void ui_display_options(void)
             }
         }
 
-        else if (input.down & KEY_A)
+        else if (input.down & HidNpadButton_A)
         {
             if (cursor == 2 && left_column) break;
             if (left_column) left_column = !left_column;
@@ -941,25 +941,25 @@ bool ui_display_yes_no_box(const char *message)
     while (appletMainLoop())
     {
         input_t input = get_input();
-        if (input.down & KEY_RIGHT)
+        if (input.down & HidNpadButton_AnyRight)
             cursor = 1;
-        if (input.down & KEY_LEFT)
+        if (input.down & HidNpadButton_AnyLeft)
             cursor = 0;
         
         int ret = check_if_touch_yesno(&input);
         if (ret != -1)
         {
             cursor = ret;
-            input.down |= KEY_A;
+            input.down |= HidNpadButton_A;
         }
 
-        if (input.down & KEY_A)
+        if (input.down & HidNpadButton_A)
         {
             flag = cursor;
             break;
         }
 
-        if (input.down & KEY_B)
+        if (input.down & HidNpadButton_B)
         {
             flag = false;
             break;
@@ -1139,44 +1139,44 @@ uint8_t handle_input(void)
     {
         g_cursor = ret;
         update_options();
-        input.down |= KEY_A;
+        input.down |= HidNpadButton_A;
     }
 
-    if (input.down & KEY_DOWN)
+    if (input.down & HidNpadButton_AnyDown)
     {
         g_cursor = move_cursor_down(g_cursor, 3);
         play_sound(g_sound_effects.move, -1, 0);
     }
 
-    else if (input.down & KEY_UP)
+    else if (input.down & HidNpadButton_AnyUp)
     {
         g_cursor = move_cursor_up(g_cursor, 3);
         play_sound(g_sound_effects.move, -1, 0);
     }
 
-    else if (input.down & KEY_L)
+    else if (input.down & HidNpadButton_L)
     {
         gc_prev_game(&g_game_info);
     }
 
-    else if (input.down & KEY_R)
+    else if (input.down & HidNpadButton_R)
     {
         gc_next_game(&g_game_info);
     }
 
-    else if (input.down & KEY_B)
+    else if (input.down & HidNpadButton_B)
     {
         if (ui_display_yes_no_box("Would you like to exit?"))
             return Option_Exit;  
     }
 
-    else if (input.down & KEY_X)
+    else if (input.down & HidNpadButton_X)
     {
         play_sound(g_sound_effects.move, -1, 0);
         ui_display_options();
     }
 
-    else if (input.down & KEY_Y)
+    else if (input.down & HidNpadButton_Y)
     {
         if (g_gc_inserted)
         {
@@ -1185,7 +1185,7 @@ uint8_t handle_input(void)
         }
     }
 
-    else if (input.down & KEY_A)
+    else if (input.down & HidNpadButton_A)
     {
         play_sound(g_sound_effects.popup, -1, 0);
         switch (g_cursor)

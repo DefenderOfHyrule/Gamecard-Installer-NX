@@ -1,6 +1,4 @@
-#ifndef _IMAGE_H_
-#define _IMAGE_H_
-
+#pragma once
 
 #include <stdint.h>
 #include <SDL2/SDL.h>
@@ -37,5 +35,3 @@ void set_image(image_t *image, int x, int y, int w, int h);
 
 //
 void free_image(image_t *image);
-
-#endif

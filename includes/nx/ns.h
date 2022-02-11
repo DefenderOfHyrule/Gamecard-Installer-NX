@@ -1,5 +1,4 @@
-#ifndef _NS_H_
-#define _NS_H_
+#pragma once
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -114,5 +113,3 @@ bool ns_list_application_record_content_meta(uint64_t offset, uint64_t app_id, N
 
 //
 bool ns_get_gamecard_info(gamecard_info_t *out);
-
-#endif

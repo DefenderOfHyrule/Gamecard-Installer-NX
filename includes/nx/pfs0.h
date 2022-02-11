@@ -1,5 +1,4 @@
-#ifndef _PFS0_H_
-#define _PFS0_H_
+#pragma once
 
 #include <stdio.h>
 #include <stdint.h>
@@ -95,5 +94,3 @@ bool pfs0_process(pfs0_struct_ptr *ptr, uint64_t offset, FILE *fp);
 
 //
 bool pfs0_start(FILE *file, uint64_t offset);
-
-#endif
