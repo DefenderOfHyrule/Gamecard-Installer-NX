@@ -69,6 +69,8 @@ typedef enum
     NcaKeyGeneration_810        = 0x9,
     NcaKeyGeneration_900        = 0x0A,
     NcaKeyGeneration_910        = 0x0B,
+    NcaKeyGeneration_1210        = 0x0C,
+    NcaKeyGeneration_1300        = 0x0D,
     NcaKeyGeneration_Invalid    = 0xFF
 } NcaKeyGeneration;
 
