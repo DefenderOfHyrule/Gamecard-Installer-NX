@@ -144,7 +144,7 @@ void fs_close_dir(FsDir *dir);
 bool fs_open_system(FsFileSystem *out, FsFileSystemType fs_type, const char *path, ...);
 
 //
-bool fs_open_system_with_id(FsFileSystem *out, uint64_t id, FsFileSystemType fs_type, const char *path, ...);
+bool fs_open_system_with_id(FsFileSystem *out, uint64_t id, FsFileSystemType fs_type, FsContentAttributes fileAttr, const char *path, ...);
 
 // open file system with ID.
 bool fs_open_system_with_patch(FsFileSystem *out, uint64_t id, FsFileSystemType fs_type);

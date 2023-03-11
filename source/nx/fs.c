@@ -349,7 +349,7 @@ bool fs_open_system(FsFileSystem *out, FsFileSystemType fs_type, const char *pat
     return true;
 }
 
-bool fs_open_system_with_id(FsFileSystem *out, uint64_t id, FsFileSystemType fs_type, const char *path, ...)
+bool fs_open_system_with_id(FsFileSystem *out, uint64_t id, FsFileSystemType fs_type, FsContentAttributes fileAttr, const char *path, ...)
 {
     char new_path[FS_MAX_PATH] = {0};
     va_list arg = {0};
@@ -357,7 +357,7 @@ bool fs_open_system_with_id(FsFileSystem *out, uint64_t id, FsFileSystemType fs_
     vsprintf(new_path, path, arg);
     va_end(arg);
 
-    Result rc = fsOpenFileSystemWithId(out, id, fs_type, path);
+    Result rc = fsOpenFileSystemWithId(out, id, fs_type, path, fileAttr);
     if (R_FAILED(rc))
     {
         write_log("failed to open file fs with ID %s\n", path);
