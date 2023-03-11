@@ -231,6 +231,10 @@ const char *nca_return_key_gen_string(uint8_t key_gen)
             return "12.1.0";
         case NcaKeyGeneration_1300:
             return "13.0.0";
+        case NcaKeyGeneration_1400:
+            return "14.0.0";
+        case NcaKeyGeneration_1500:
+            return "15.0.0";
         case NcaKeyGeneration_Invalid:
             return "Invalid";
         default:
@@ -270,6 +274,10 @@ uint16_t nca_return_key_gen_int(uint8_t key_gen)
             return 1210;
         case NcaKeyGeneration_1300:
             return 1300;
+        case NcaKeyGeneration_1400:
+            return 1400;
+        case NcaKeyGeneration_1500:
+            return 1500;
         case NcaKeyGeneration_Invalid:
             return UINT16_MAX;
         default:
