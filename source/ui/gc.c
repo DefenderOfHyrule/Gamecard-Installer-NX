@@ -415,7 +415,8 @@ bool __gc_parse_cnmt(void)
         }
 
         NcmContentInfo cnmt_info = {0};
-        memcpy(cnmt_info.size, &header.size, 0x6);
+
+        ncmU64ToContentInfoSize(header.size, &cnmt_info);
         cnmt_info.content_id = nca_get_id_from_string(GAMECARD.string_table[i].name);
         cnmt_info.content_type = NcmContentType_Meta;
         cnmt_info.id_offset = 0;

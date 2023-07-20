@@ -523,7 +523,7 @@ size_t ncm_calculate_content_info_size(const NcmContentInfo *info)
     }
 
     size_t size = 0;
-    memcpy(&size, info->size, 0x6);
+    ncmContentInfoSizeToU64(info, &size);
     return size;
 }
 
