@@ -32,7 +32,7 @@ include $(DEVKITPRO)/libnx/switch_rules
 
 APP_TITLE   :=	GameCard Installer
 APP_AUTHOR  :=	TotalJustice
-APP_VERSION :=	2.0.4
+APP_VERSION :=	2.0.5
 
 TARGET		:=	gamecard_installer
 BUILD		:=	build
