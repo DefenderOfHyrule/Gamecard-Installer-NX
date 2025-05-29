@@ -202,9 +202,9 @@ bool es_get_common_tik_data(void *out, size_t out_size, const FsRightsId *rights
 {
     uint64_t buffer_idk = 0;
 
-    Result rc = serviceDispatchInOut(&g_es_service, 16, rights_id, buffer_idk,
-        .buffer_attrs = { SfBufferAttr_HipcMapAlias | SfBufferAttr_Out },
-        .buffers = { { out, out_size } });
+    Result rc = serviceDispatchInOut(&g_es_service, 16, buffer_idk, buffer_idk,
+        .buffer_attrs = { SfBufferAttr_HipcMapAlias | SfBufferAttr_In, SfBufferAttr_HipcMapAlias | SfBufferAttr_Out },
+        .buffers = { { rights_id, sizeof(FsRightsId) }, { out, out_size } });
 
     if (R_FAILED(rc))
     {

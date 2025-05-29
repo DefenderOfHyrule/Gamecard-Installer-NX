@@ -30,9 +30,9 @@ include $(DEVKITPRO)/libnx/switch_rules
 #     - <libnx folder>/default_icon.jpg
 #---------------------------------------------------------------------------------
 
-APP_TITLE   :=	GameCard Installer
-APP_AUTHOR  :=	TotalJustice
-APP_VERSION :=	2.0.5
+APP_TITLE   :=	GameCard Installer NX
+APP_AUTHOR  :=	DefenderOfHyrule
+APP_VERSION :=	2.0.6
 
 TARGET		:=	gamecard_installer
 BUILD		:=	build
@@ -59,7 +59,7 @@ CXXFLAGS	:= $(CFLAGS) -fno-rtti -fno-exceptions
 ASFLAGS		:=	-g $(ARCH)
 LDFLAGS		=	-specs=$(DEVKITPRO)/libnx/switch.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
 
-LIBS		:=  -lSDL2_mixer -lSDL2_ttf -lSDL2_image -lSDL2 -lSDL2_gfx `sdl2-config --libs` `freetype-config --libs` \
+LIBS		:=  -lSDL2_mixer -lSDL2_ttf -lharfbuzz -lSDL2_image -lSDL2 -lSDL2_gfx `sdl2-config --libs` `freetype-config --libs` \
 				-lwebp -lpng -lturbojpeg -lmodplug -lmpg123 -lFLAC -lopusfile -lopus -lvorbisidec -logg -lz \
 				-lnx
 
